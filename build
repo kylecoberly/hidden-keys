@@ -1,0 +1,8 @@
+#!/bin/bash
+
+API_KEY=`cat .env`
+echo $API_KEY
+
+rm dist/index.html
+
+cat index.html | sed "s/YOUR_API_KEY/$API_KEY/g" >> dist/index.html
